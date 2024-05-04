@@ -75,14 +75,25 @@ function CarouselComponent() {
       });
   };
 
+
   const handleReset = (id) => {
     const newLocation = locations[Math.floor(Math.random() * locations.length)]; // Pick a random location
-    setContracts(prevContracts =>
-      prevContracts.map(contract =>
-        contract.id === id ? { ...contract, trackLocation: newLocation, trackingStatus: false } : contract
-      )
-    );
+    const contractRef = ref(database, `profiles/${id}`);
+  
+    // Update the trackingStatus to false in Firebase
+    update(contractRef, { trackingStatus: false, trackLocation: newLocation })
+      .then(() => {
+        setContracts(prevContracts =>
+          prevContracts.map(contract =>
+            contract.id === id ? { ...contract, trackLocation: newLocation, trackingStatus: false } : contract
+          )
+        );
+      })
+      .catch(error => {
+        console.error('Error updating tracking status:', error);
+      });
   };
+  
 
   const handleConfirmClose = (id) => {
     const contractRef = ref(database, `profiles/${id}`);
@@ -114,6 +125,7 @@ function CarouselComponent() {
                 trackLocation={item.trackLocation}
                 atk={item.atk} 
                 def={item.def}
+                trackingStatus={item.trackingStatus} // Added tracking status
                 contractStatus={item.contractStatus}
                 onTrack={() => handleTrack(item.id)}
                 onReset={() => handleReset(item.id)}
@@ -130,4 +142,6 @@ function CarouselComponent() {
 }
 
 export default CarouselComponent;
+
+
 
