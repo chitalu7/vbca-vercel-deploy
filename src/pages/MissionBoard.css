@@ -1,0 +1,19 @@
+/* MissionBoard.css */
+.mission-board {
+    position: relative; 
+  }
+  
+
+  
+.backButton {
+  position: fixed; /* Changed from absolute to fixed to position relative to the viewport */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  left: 50%; /* Position the left edge of the button at the center of the screen */
+  transform: translateX(-50%); /* Shift the button leftwards by half of its own width to center it */
+  z-index: 100; /* Adjust zIndex if needed */
+  text-decoration: none;
+  color: blue; /* Ensure this color stands out on your page's background */
+}
+
+
+  

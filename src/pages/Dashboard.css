@@ -1,0 +1,76 @@
+/* Base styles for HTML and Body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures full height of the viewport */
+    width: 100%; /* Ensures full width of the viewport */
+    background-color: #121212; /* Consistent background color */
+    overflow-x: hidden; /* Hides horizontal scroll */
+    overflow-y: auto;   /* Allows vertical scrolling only if needed */
+}
+
+/* Dashboard styles */
+.dashboard {
+    background-color: #121212;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button container for action buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduces space between buttons */
+}
+
+/* Styling for buttons in the dashboard */
+.dashboard-button {
+    background-color: transparent;
+    border: 2px solid blue;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 100%; /* Set a specific width or max-width as needed */
+    text-align: center; /* Ensures text is centered */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds shadow for depth */
+}
+
+/* Hover effect for buttons */
+.dashboard-button:hover {
+    transform: scale(1.1); /* Makes button pop out slightly */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    border-color: darkblue; /* Changes border color on hover */
+}
+
+/* Active state for better accessibility on mobile */
+.dashboard-button:active {
+    transform: scale(1.1); /* Ensures visual feedback on touch devices */
+}
+
+/* Pulsating effect for the button border */
+@keyframes pulse-animation {
+    0% {
+        border-color: blue;
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7);
+    }
+    70% {
+        border-color: darkblue;
+        box-shadow: 0 0 0 10px rgba(0, 0, 255, 0);
+    }
+    100% {
+        border-color: blue;
+        box-shadow: 0 0 0 0 rgba(0, 0, 255, 0);
+    }
+}
+
+.dashboard-button {
+    animation: pulse-animation 2s infinite;
+}
+

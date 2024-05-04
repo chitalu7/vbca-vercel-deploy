@@ -1,0 +1,58 @@
+.profile-form {
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #808080;
+    border-radius: 8px;
+  }
+
+  /* Media query for screens larger than 768px */
+@media (min-width: 768px) {
+  .profile-form, .form-container {
+    max-width: 800px; /* Or any other max-width you prefer */
+  }
+}
+
+.form-container {
+  margin-top: 900px;
+}
+  
+  .profile-form fieldset {
+    border: none;
+    margin: 100px;
+    padding: 0;
+  }
+
+  fieldset {
+    width: 640px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .save-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .save-btn:hover {
+    background-color: #0056b3;
+  }
+  

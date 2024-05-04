@@ -1,0 +1,71 @@
+
+   
+ .carousel-item {
+  transition: transform 0.8s ease-in-out; /* Smoother and slower transition */
+  
+} 
+
+
+  @media (max-width: 768px) {
+    .card {
+      width: 100%; 
+    }
+  }
+
+  @media (min-width: 360px) {
+    .carousel-container{
+      margin-top: 40%;
+    }
+  }
+
+  @media (min-width: 375px) {
+    .carousel-container{
+      margin-top: 60%;
+    }
+  }
+
+  @media (min-width: 390px) {
+    .carousel-container{
+      margin-top: 10%;
+    }
+  }
+
+  @media (min-width: 412px) {
+    .carousel-container{
+      margin-top: 10%;
+    }
+  }
+  
+  @media (min-width: 414px) {
+    .carousel-container{
+      margin-top: 10%;
+    }
+  }
+
+  @media (min-width: 430px) {
+    .carousel-container{
+      margin-top: 10%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .carousel-container{
+      margin-top: 20%;
+    }
+  }
+
+
+  @media (min-width: 1280px) {
+    .carousel-container{
+      margin-top: 80%;
+      width: 400px;
+    }
+  }
+
+  
+  @media (min-width: 1536px) {
+    .carousel-container{
+      margin-top: 20%;
+      width: 420px;
+    }
+  }

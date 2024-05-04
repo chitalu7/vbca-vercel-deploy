@@ -1,0 +1,57 @@
+/* Base styles for the whole page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #121212; /* Dark background for the whole app */
+    color: white; /* White text for contrast */
+    font-family: Arial, sans-serif; /* Consistent font across the app */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the landing page container */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+}
+
+h1 {
+    margin: 20px 0; /* Space above and below the header */
+}
+
+/* Button styling */
+button {
+    background-color: transparent;
+    border: 2px solid blue; /* Blue border to match the dashboard buttons */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px; /* Space between buttons */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+    width: 200px; /* Ensuring all buttons are the same width */
+}
+
+button:hover {
+    background-color: #1a1a1a; /* Slightly lighter black when hovered */
+    transform: scale(1.05); /* Slight pop effect on hover */
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+    button {
+        width: 80%; /* Full-width buttons on smaller screens */
+        padding: 12px 0; /* Larger padding for easier touch */
+    }
+
+    h1 {
+        font-size: 20px; /* Smaller font size for header on smaller screens */
+    }
+}
